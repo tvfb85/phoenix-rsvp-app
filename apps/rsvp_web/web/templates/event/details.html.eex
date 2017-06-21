@@ -1,0 +1,2 @@
+<h1><%= @event.title %><small> <%= @event.location %> </h1>
+<h3> <%= format_date(@event.date) %>, <%= format_time(@event.date) %> </h3>
