@@ -19,8 +19,8 @@ defmodule RsvpWeb.EventController do
 
   def add(conn, %{"events" => events}) do
     events = Map.update!(events, "date", fn d -> d <> ":00" end)
-    Rsvp.Events.changeset(%Rsvp.Events{}, events)
+    %{id: id} = Rsvp.Events.changeset(%Rsvp.Events{}, events)
     |> Rsvp.EventQueries.create
-    redirect conn, to: event_path(conn, :list)
+    redirect conn, to: event_path(conn, :show, id)
   end
 end
