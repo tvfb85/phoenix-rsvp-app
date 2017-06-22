@@ -18,6 +18,8 @@ defmodule RsvpWeb.Router do
 
     get "/", PageController, :index
     get "/events", EventController, :list
+    get "/events/new", EventController, :create
+    post "/events/new", EventController, :add
     get "/events/:id", EventController, :show
   end
 
