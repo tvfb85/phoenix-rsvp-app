@@ -1,0 +1,1 @@
+<h3> Total count: <%=Enum.count(@list) %></h3>
