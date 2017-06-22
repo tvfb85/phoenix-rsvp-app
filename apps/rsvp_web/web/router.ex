@@ -29,6 +29,7 @@ defmodule RsvpWeb.Router do
     get "/new", EventController, :create
     post "/new", EventController, :add
     get "/:id", EventController, :show
+    post "/:id/reserve", EventController, :reserve
 
   end
 
