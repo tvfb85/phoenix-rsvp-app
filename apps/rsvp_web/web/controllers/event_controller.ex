@@ -1,7 +1,7 @@
   defmodule RsvpWeb.EventController do
   use RsvpWeb.Web, :controller
 
-  plug RsvpWeb.AuthorizedPlug, "create" when action in [:create]
+  plug RsvpWeb.AuthorizedPlug, (System.get_env("ALLOWED_USERNAME") || "montana") when action in [:create]
 
   def show(conn, %{"id" => id}) do
     event = Rsvp.EventQueries.get_by_id(id)
