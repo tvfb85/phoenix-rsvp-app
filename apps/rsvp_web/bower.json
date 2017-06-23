@@ -1,0 +1,20 @@
+{
+  "name": "rsvp_web",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Flora Harvey <fharvey555@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/FloraHarvey/event_app_elixir",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}

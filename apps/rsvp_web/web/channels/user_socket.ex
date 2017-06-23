@@ -3,7 +3,7 @@ defmodule RsvpWeb.UserSocket do
 
   ## Channels
   # channel "room:*", RsvpWeb.RoomChannel
-
+  channel "event:*", RsvpWeb.EventChannel
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
   # transport :longpoll, Phoenix.Transports.LongPoll
