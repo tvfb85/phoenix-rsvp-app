@@ -1,4 +1,4 @@
-defmodule RsvpWeb.EventController do
+  defmodule RsvpWeb.EventController do
   use RsvpWeb.Web, :controller
 
   plug RsvpWeb.AuthorizedPlug, "create" when action in [:create]
@@ -34,7 +34,8 @@ defmodule RsvpWeb.EventController do
   end
 
   def reserve(conn, %{"id" => id, "reservation" => %{"quantity" => quantity}}) do
-    Rsvp.EventQueries.decrease_quantity(id, quantity)
+    {:ok, event} = Rsvp.EventQueries.decrease_quantity(id, quantity)
+    RsvpWeb.EventChannel.send_update(event)
     redirect conn, to: event_path(conn, :show, id)
   end
 end
