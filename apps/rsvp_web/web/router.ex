@@ -23,6 +23,9 @@ defmodule RsvpWeb.Router do
 
     get "/login", LoginController, :index
     post "/login", LoginController, :login
+
+    get "/signup", SignupController, :index
+    post "/signup", SignupController, :signup
   end
 
   scope "/events", RsvpWeb do

@@ -1,0 +1,25 @@
+<%= form_for @conn, signup_path(@conn, :signup), [as: :signup], fn f -> %>
+
+  <div class="form-group">
+    <%= label f, :username, "Username" %>
+    <%= text_input f, :username %>
+  </div>
+  <div class="form-group">
+    <%= label f, :first_name, "First Name" %>
+    <%= text_input f, :first_name %>
+  </div>
+  <div class="form-group">
+    <%= label f, :last_name, "Last Name" %>
+    <%= text_input f, :last_name %>
+  </div>
+  <div class="form-group">
+    <%= label f, :email, "Email" %>
+    <%= text_input f, :email %>
+  </div>
+  <div class="form-group">
+    <%= label f, :password, "Password" %>
+    <%= text_input f, :password %>
+  </div>
+
+  <%= submit "Sign Up" %>
+<% end %>
