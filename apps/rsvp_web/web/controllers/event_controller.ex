@@ -24,6 +24,7 @@
   end
 
   def add(conn, %{"events" => events}) do
+
     events = Map.update!(events, "date", fn d -> d <> ":00" end)
     changeset = Rsvp.Events.changeset(%Rsvp.Events{}, events)
 

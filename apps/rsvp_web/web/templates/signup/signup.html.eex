@@ -1,24 +1,29 @@
-<%= form_for @conn, signup_path(@conn, :signup), [as: :signup], fn f -> %>
+<%= form_for @changeset, signup_path(@conn, :signup), fn f -> %>
 
   <div class="form-group">
     <%= label f, :username, "Username" %>
     <%= text_input f, :username %>
+    <%= error_tag f, :username %>
   </div>
   <div class="form-group">
     <%= label f, :first_name, "First Name" %>
     <%= text_input f, :first_name %>
+    <%= error_tag f, :first_name %>
   </div>
   <div class="form-group">
     <%= label f, :last_name, "Last Name" %>
     <%= text_input f, :last_name %>
+    <%= error_tag f, :last_name %>
   </div>
   <div class="form-group">
     <%= label f, :email, "Email" %>
     <%= text_input f, :email %>
+    <%= error_tag f, :email %>
   </div>
   <div class="form-group">
     <%= label f, :password, "Password" %>
     <%= text_input f, :password %>
+    <%= error_tag f, :password %>
   </div>
 
   <%= submit "Sign Up" %>
