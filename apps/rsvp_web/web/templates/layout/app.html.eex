@@ -16,6 +16,7 @@
       <li><a href="/">Home</a></li>
       <li><a href="<%= event_path(@conn, :list) %>">Events</a></li>
       <li><a href="<%= login_path(@conn, :index) %>">Login</a></li>
+      <li><a href="<%= chat_path(@conn, :index) %>">Chat</a></li>
     </ul>
     <div class="container">
       <header class="header">

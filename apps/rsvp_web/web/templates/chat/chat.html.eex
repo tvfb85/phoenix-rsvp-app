@@ -1,0 +1,9 @@
+<h1>Chat Room!</h1>
+<p>Welcome all</p>
+<div class="chat-box">
+</div>
+
+  <div class="form-group">
+    <label for="Text"> Type here</label>
+    <input type="text" name="text" value="" id="message">
+  </div>

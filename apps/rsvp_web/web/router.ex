@@ -18,6 +18,9 @@ defmodule RsvpWeb.Router do
 
     get "/", PageController, :index
 
+    get "/chat", ChatController, :index
+    post "/chat/new", ChatController, :new
+
     get "/login", LoginController, :index
     post "/login", LoginController, :login
   end

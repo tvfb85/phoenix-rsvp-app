@@ -17,3 +17,31 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
   * Docs: https://hexdocs.pm/phoenix
   * Mailing list: http://groups.google.com/group/phoenix-talk
   * Source: https://github.com/phoenixframework/phoenix
+
+## User Stories
+
+```
+As a user
+I want to login to the site
+So that I can have a personalised experience.
+
+As a user
+I want my name to be listed on an event
+So that other users know who I am.
+
+As a user
+For ease of access
+I want to be able to log in with facebook.
+
+As a user
+I want to see an error message
+When accessing a page and not logged in.
+
+As a user
+So that I can find friends to chat to
+I would like to see a list of online users.
+
+As a user
+So that I can correct my typos
+I would like to be able to edit previous messages in the chat.
+```

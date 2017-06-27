@@ -6,7 +6,9 @@ defmodule RsvpWeb.LoginController do
   end
 
   def login(conn, %{"login" => %{"username" => name}}) do
-    expiration = 60*60*24*7
+    IO.puts "Next is the conn"
+    IO.inspect conn.params["login"]["username"]
+    expiration = 60
     conn
     |> Plug.Conn.put_resp_cookie("user_name", name, max_age: expiration)
     |> redirect(to: "/")
