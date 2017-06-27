@@ -11,6 +11,8 @@ defmodule Rsvp.Users do
     field :password_hash, :string
     field :password, :string, virtual: true
 
+    has_many :events, Rsvp.Events
+
     timestamps
   end
 

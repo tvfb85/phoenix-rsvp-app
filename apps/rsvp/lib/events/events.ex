@@ -10,15 +10,18 @@ defmodule Rsvp.Events do
     field :description, :string
     field :quantity_available, :integer, default: 25
 
+    belongs_to :user, Rsvp.Users, foreign_key: :user_id
+
     timestamps
   end
 
-  @required_fields ~w(title location date)a
+  @required_fields ~w(title location date user_id)a
   @optional_fields ~w(description)a
 
   def changeset(event, params \\ %{}) do
     event
     |> cast(params, @required_fields ++ @optional_fields)
+    |> cast_assoc(:user)
     |> validate_required(@required_fields)
     |> validate_change(:date, &must_be_future/2)
   end

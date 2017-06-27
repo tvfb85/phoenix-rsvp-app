@@ -7,4 +7,7 @@ defmodule Rsvp.UserQueries do
     Repo.insert(user)
   end
 
+  def get_by_username(username) do
+    Repo.get(Users, username)
+  end
 end
