@@ -3,7 +3,7 @@ services:
   web:
     depends_on:
       - postgres
-      env_file: .env
+    env_file: .env
     build:
       context: ./
       dockerfile: Dockerfile
